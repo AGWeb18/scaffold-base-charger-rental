@@ -5,7 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
+import {
+  AcademicCapIcon,
+  Bars3Icon,
+  BugAntIcon,
+  CurrencyDollarIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 import {
   BaseFaucetsButton,
   FaucetButton,
@@ -26,9 +32,24 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
-    label: "Debug Contracts",
-    href: "/debug",
+    label: "List Your Charger",
+    href: "/list-charger",
+    icon: <CurrencyDollarIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Explore Chargers",
+    href: "/explore",
+    icon: <MagnifyingGlassIcon className="h-4 w-4" />,
+  },
+  {
+    label: "View Charging Appointment",
+    href: "/view-appointments",
     icon: <BugAntIcon className="h-4 w-4" />,
+  },
+  {
+    label: "About",
+    href: "/about",
+    icon: <AcademicCapIcon className="h-4 w-4" />,
   },
 ];
 
